@@ -1,0 +1,76 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000028d74e55f70 .scope module, "d_flip_flop_tb" "d_flip_flop_tb" 2 4;
+ .timescale -9 -9;
+v0000028d74e62250_0 .net "Q", 0 0, L_0000028d74e63020;  1 drivers
+v0000028d74e61ad0_0 .var "data", 0 0;
+v0000028d74e61f30_0 .var "enable", 0 0;
+v0000028d74e627f0_0 .net "not_Q", 0 0, L_0000028d74e62e60;  1 drivers
+S_0000028d74e662f0 .scope module, "uut" "d_flip_flop" 2 9, 3 1 0, S_0000028d74e55f70;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "enable";
+    .port_info 1 /INPUT 1 "data";
+    .port_info 2 /OUTPUT 1 "Q";
+    .port_info 3 /OUTPUT 1 "not_Q";
+L_0000028d74e66700 .functor NOT 1, v0000028d74e61ad0_0, C4<0>, C4<0>, C4<0>;
+L_0000028d74e1ba60 .functor AND 1, L_0000028d74e66700, v0000028d74e61f30_0, C4<1>, C4<1>;
+L_0000028d74e33780 .functor OR 1, L_0000028d74e1ba60, L_0000028d74e63170, C4<0>, C4<0>;
+L_0000028d74e33620 .functor NOT 1, L_0000028d74e33780, C4<0>, C4<0>, C4<0>;
+L_0000028d74e63100 .functor AND 1, v0000028d74e61ad0_0, v0000028d74e61f30_0, C4<1>, C4<1>;
+L_0000028d74e62ed0 .functor OR 1, L_0000028d74e63100, L_0000028d74e33620, C4<0>, C4<0>;
+L_0000028d74e63170 .functor NOT 1, L_0000028d74e62ed0, C4<0>, C4<0>, C4<0>;
+L_0000028d74e63020 .functor BUFZ 1, L_0000028d74e33620, C4<0>, C4<0>, C4<0>;
+L_0000028d74e62e60 .functor BUFZ 1, L_0000028d74e63170, C4<0>, C4<0>, C4<0>;
+v0000028d74e56100_0 .net "Q", 0 0, L_0000028d74e63020;  alias, 1 drivers
+v0000028d74e33180_0 .net *"_ivl_0", 0 0, L_0000028d74e66700;  1 drivers
+v0000028d74e1b9c0_0 .net *"_ivl_11", 0 0, L_0000028d74e62ed0;  1 drivers
+v0000028d74e66480_0 .net *"_ivl_3", 0 0, L_0000028d74e1ba60;  1 drivers
+v0000028d74e66520_0 .net *"_ivl_5", 0 0, L_0000028d74e33780;  1 drivers
+v0000028d74e665c0_0 .net *"_ivl_9", 0 0, L_0000028d74e63100;  1 drivers
+v0000028d74e66660_0 .net "data", 0 0, v0000028d74e61ad0_0;  1 drivers
+v0000028d74eaf840_0 .net "enable", 0 0, v0000028d74e61f30_0;  1 drivers
+v0000028d74eaf8e0_0 .net "feedback1", 0 0, L_0000028d74e33620;  1 drivers
+v0000028d74eaf980_0 .net "feedback2", 0 0, L_0000028d74e63170;  1 drivers
+v0000028d74e62430_0 .net "not_Q", 0 0, L_0000028d74e62e60;  alias, 1 drivers
+    .scope S_0000028d74e55f70;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "d_flip_flop_tb.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000028d74e55f70 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000028d74e61f30_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000028d74e61ad0_0, 0;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000028d74e61ad0_0, 0;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000028d74e61f30_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000028d74e61ad0_0, 0;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000028d74e61f30_0, 0;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000028d74e61f30_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000028d74e61ad0_0, 0;
+    %delay 10, 0;
+    %vpi_call 2 28 "$finish" {0 0 0};
+    %vpi_call 2 29 "$display", "Test Complete" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "d_flip_flop_tb.v";
+    "./d_flip_flop.v";
