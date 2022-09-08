@@ -1,3 +1,9 @@
+// ----TESTBENCH FOR CLOCK--------------------------------------
+
+// Written by Asanka Sovis (04/09/2022)
+// Based on the 8-bit Computer series by Ben Eater
+// ------------------------------------------------------------
+
 `timescale 1ns/1ns
 `include "clock.v"
 
