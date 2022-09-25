@@ -6,33 +6,29 @@
 
 `timescale 1ns/1ns
 `include "d_flip_flop.v"
+`include "../clock/test_clock.v"
 
 module d_flip_flop_tb;
 
-    reg enable, data;
-    wire Q, not_Q;
+    reg data;
+    wire clk, Q, not_Q;
 
-    d_flip_flop uut(enable, data, Q, not_Q);
+    test_clock clock(clk);
+    d_flip_flop uut(clk, data, Q, not_Q);
 
     initial begin
         $dumpfile("d_flip_flop_tb.vcd");
         $dumpvars(0, d_flip_flop_tb);
 
-        enable <= 1; // Enable data storage
         data <= 0; // Data is low
         // Must set Q to low
 
         #10 data <= 1; // Data goes high
-        // Must set Q to high
+        // Must set Q to high on next pulse
 
-        #10 enable <= 0; // Disable data storage
         data <= 0; // Data goes low
         // Must not change the Q value
 
-        #10 enable <= 1; // Enable data storage
-        // Must set Q to low
-
-        #10 enable <= 0; // Disable data storage
         data <= 1; // Data goes high
         // Must not change the Q value
 

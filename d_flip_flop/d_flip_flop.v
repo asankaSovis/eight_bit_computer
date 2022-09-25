@@ -1,6 +1,6 @@
 // ----D FLIP FLOP MODULE--------------------------------------
 // Storage of a one bit of data
-// Input enable -  Enables the memory to store the recieved bit
+// Input clk -  Clock input
 // Input data -  Data bit recieved
 // Output Q - Sotred output
 // Output not_Q - Inverted stored output
@@ -9,15 +9,21 @@
 // Based on the 8-bit Computer series by Ben Eater
 // ------------------------------------------------------------
 
-module d_flip_flop (enable, data, Q, not_Q);
+module d_flip_flop (clk, data, Q, not_Q);
 
-    input enable, data;
+    input clk, data;
     output Q, not_Q;
 
     wire feedback1, feedback2;
+    reg a;
 
-    assign feedback1 = ~((~(data) && enable) || feedback2);
-    assign feedback2 = ~((data && enable) || feedback1);
+    assign feedback1 = ~((~(a)) || feedback2);
+    assign feedback2 = ~((a) || feedback1);
+
+    always @(posedge clk) 
+    begin
+        a <= data;
+    end 
 
     assign Q = feedback1;
     assign not_Q = feedback2;

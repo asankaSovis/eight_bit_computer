@@ -1,0 +1,143 @@
+$date
+	Sun Sep 25 12:28:57 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module bit_register_tb $end
+$var wire 1 ! out $end
+$var wire 1 " clk $end
+$var reg 1 # data $end
+$var reg 1 $ input_enable $end
+$var reg 1 % output_enable $end
+$scope module clock $end
+$var wire 1 " clk $end
+$var reg 1 & apulse $end
+$var reg 1 ' hlt $end
+$var reg 1 ( mpulse $end
+$var reg 1 ) select $end
+$scope module test $end
+$var wire 1 & apulse $end
+$var wire 1 " clk $end
+$var wire 1 ' hlt $end
+$var wire 1 ( mpulse $end
+$var wire 1 ) select $end
+$upscope $end
+$upscope $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # data $end
+$var wire 1 $ input_enable $end
+$var wire 1 * mem_data $end
+$var wire 1 % output_enable $end
+$var wire 1 ! out $end
+$var wire 1 + not_out $end
+$var wire 1 , buf_out $end
+$scope module buf_memory $end
+$var wire 1 % enable $end
+$var wire 1 , data $end
+$var reg 1 ! out $end
+$upscope $end
+$scope module flip_memory $end
+$var wire 1 , Q $end
+$var wire 1 " clk $end
+$var wire 1 * data $end
+$var wire 1 - feedback1 $end
+$var wire 1 . feedback2 $end
+$var wire 1 + not_Q $end
+$var reg 1 / a $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x/
+x.
+x-
+x,
+x+
+x*
+1)
+0(
+0'
+1&
+0%
+0$
+0#
+1"
+z!
+$end
+#2
+1*
+1#
+1$
+0"
+0&
+#4
+1,
+1-
+0+
+0.
+1*
+1/
+0#
+0$
+1"
+1&
+#6
+0"
+0&
+#7
+1!
+1%
+#8
+z!
+0%
+1"
+1&
+#10
+0*
+1$
+0"
+0&
+#12
+1+
+1.
+0,
+0-
+0*
+0/
+0$
+1"
+1&
+#14
+0!
+1%
+0"
+0&
+#15
+z!
+0%
+#16
+1"
+1&
+#18
+0"
+0&
+#20
+1"
+1&
+#22
+0"
+0&
+#24
+1"
+1&
+#25
