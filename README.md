@@ -5,12 +5,23 @@
 [FPGA](https://en.wikipedia.org/wiki/Field-programmable_gate_array)s are an interesting invention that is expected to revolutionize the digital industry. From simple boolean circuits to complicated microcontrollers can be created just with a few lines of code using FPGAs.
 
 > ![image](https://user-images.githubusercontent.com/46389631/188553138-14cbf24a-1e72-4b26-9f6a-5b5afa0e11cb.png)
->
 > An Altera Stratix IV FPGA Chip, Source: [wikipedia.org](http://wikipedia.org/)
 
 This series will focus on building the [8-bit computer](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU) that [Ben Eater](https://www.youtube.com/c/BenEater) built on his youtube channel. However, it will be done not with actual chips and hardware, but with Verilog code and FPGA simulations.
 
 Check the [Blog Series](https://asanka.hashnode.dev/series/eight-bit-computer) that this repo is connected to.
+
+## Blog Posts
+- [Introduction](https://asanka.hashnode.dev/01-introduction-eight-bit-computer) ✅
+- [Clock](https://asanka.hashnode.dev/02-clock-eight-bit-computer) ✅
+- [D Flip Flop](https://asanka.hashnode.dev/03-d-flip-flop-eight-bit-computer) ✅
+- [One Bit Register](https://asanka.hashnode.dev/04-one-bit-register-eight-bit-computer) ✅
+- Eight Bit Register 🔄
+
+## Components
+- Clock ✅
+- One Bit Register ✅
+- Eight Bit Register 🔁
 
 ---
 
