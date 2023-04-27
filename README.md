@@ -2,6 +2,8 @@
 
 ![8bit-computer](https://user-images.githubusercontent.com/46389631/188558817-c3a443d7-cae7-4258-ade7-747257a490fa.png)
 
+*💸 Please consider donating on [Paypal](https://www.paypal.com/donate/?hosted_button_id=4EWXTWQ9FUFLA) to keep this project alive.*
+
 [FPGA](https://en.wikipedia.org/wiki/Field-programmable_gate_array)s are an interesting invention that is expected to revolutionize the digital industry. From simple boolean circuits to complicated microcontrollers can be created just with a few lines of code using FPGAs.
 
 > ![image](https://user-images.githubusercontent.com/46389631/188553138-14cbf24a-1e72-4b26-9f6a-5b5afa0e11cb.png)
